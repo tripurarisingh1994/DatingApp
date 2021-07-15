@@ -10,7 +10,7 @@ import { ReplaySubject } from 'rxjs';
 })
 export class AccountService {
 
-  private currentUserSource = new ReplaySubject<User|null>(1)
+  private currentUserSource = new ReplaySubject<User | null>(1)
   currentUser$ = this.currentUserSource.asObservable()
 
   constructor(private http: HttpClient) { }
